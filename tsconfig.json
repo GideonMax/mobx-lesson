@@ -1,0 +1,14 @@
+{
+  "extends": "@sindresorhus/tsconfig",
+  "compilerOptions": {
+    "module": "node16",
+    "jsx": "react-jsx",
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "noUncheckedIndexedAccess": false,
+    "resolveJsonModule": true
+  },
+  "include": [
+    "src"
+  ]
+}

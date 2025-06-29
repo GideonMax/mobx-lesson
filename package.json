@@ -1,0 +1,23 @@
+{
+  "name": "mobx-lesson",
+  "scripts": {
+    "start": "vite"
+  },
+  "dependencies": {
+    "@mantine/core": "^8.1.2",
+    "@mantine/hooks": "^8.1.2",
+    "@mantine/notifications": "^8.1.2",
+    "@sindresorhus/tsconfig": "^7.0.0",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.0.4",
+    "glob": "^11.0.3",
+    "mobx": "^6.13.7",
+    "mobx-react-lite": "^4.1.0",
+    "mobx-utils": "^6.1.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  }
+}
