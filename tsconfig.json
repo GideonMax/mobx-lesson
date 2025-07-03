@@ -6,7 +6,10 @@
     "outDir": "dist",
     "esModuleInterop": true,
     "noUncheckedIndexedAccess": false,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "types": [
+      "vite/client"
+    ]
   },
   "include": [
     "src"

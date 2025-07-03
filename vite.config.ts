@@ -1,23 +1,34 @@
 import { defineConfig } from "vite";
 import pluginReact from "@vitejs/plugin-react";
-import { Dirent, opendirSync } from "node:fs";
-import { resolve } from "node:path";
+import { globSync } from "glob";
+import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 import { cwd } from "node:process";
-import { glob,globSync } from "glob";
-const folder = opendirSync("./src/pages");
 
 const pages = globSync("./src/**/index.html");
-console.log(pages);
 export default defineConfig(() => {
 
     return {
         appType: "mpa" as const,
-        plugins: [pluginReact()],
+        plugins: [pluginReact({
+            babel: {
+                plugins: [
+                    [
+                        "@babel/plugin-proposal-decorators",
+                        {
+                            version: "2023-05"
+                        }
+                    ]
+                ]
+            }
+        }), vanillaExtractPlugin()],
         build: {
             rollupOptions: {
                 input: ["index.html", ...pages]
             }
         },
-        define:{pages}
+        define: {
+            pages,
+            cwd: JSON.stringify(cwd())
+        }
     };
 });
