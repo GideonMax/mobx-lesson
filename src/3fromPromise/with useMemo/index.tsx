@@ -6,8 +6,6 @@ import { countTheTexts, getTheText } from "../api";
 import { Box, LoadingOverlay, NumberInput, Skeleton } from "@mantine/core";
 
 
-
-
 const TheText = observer<{ currentIndex: number }>(({ currentIndex }) => {
     const prevPromise = useRef<IPromiseBasedObservable<string>>(undefined);
 

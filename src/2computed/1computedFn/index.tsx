@@ -53,6 +53,7 @@ const Item = observer<{ item: Item, store: Store }>(({ item, store }) => {
         <Text>{item.title}</Text>
     </Box>;
 });
+
 export const CFNExample = observer(() => {
     const store = useMemo(() => new Store, []);
     const ref = useRef<React.ComponentRef<typeof TextInput>>(null);

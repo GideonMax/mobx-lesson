@@ -21,7 +21,6 @@ class Store {
         return this.items.filter(item => item.isSelected).map(item => item.id);
     }
 
-
     public addItem(title: string) {
         this.items.push({
             title,

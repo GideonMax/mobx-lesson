@@ -24,6 +24,7 @@ class Store {
         if (value.length > 5) {
             this.confirmModalOpen = true;
             this.operationConfirmed = null;
+
             await when(() => this.operationConfirmed !== null);
             if (!this.operationConfirmed) return;
         }

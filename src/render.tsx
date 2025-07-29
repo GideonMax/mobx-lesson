@@ -11,7 +11,7 @@ export function render(element: JSX.Element) {
 
     ReactDOM.createRoot(htmlElement).render(
         <MantineProvider>
-            <Notifications autoClose={3000}  />
+            <Notifications limit={5} autoClose={3000} />
             {element}
         </MantineProvider>
     );
